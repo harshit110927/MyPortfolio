@@ -5,8 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 interface ContactFormData {
   name: string;
@@ -23,25 +21,20 @@ export default function Contact() {
     message: ""
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      return await apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon."
-      });
-      setFormData({ name: "", email: "", message: "" });
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Failed to send message",
-        description: error.message || "Please try again later.",
-        variant: "destructive"
-      });
-    }
-  });
+  const handleFormSubmit = () => {
+    const subject = encodeURIComponent(`Portfolio Contact: ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    const mailtoLink = `mailto:harshit110927@gmail.com?subject=${subject}&body=${body}`;
+    
+    window.open(mailtoLink, '_blank');
+    
+    toast({
+      title: "Email client opened!",
+      description: "Your default email client should open with the message pre-filled."
+    });
+    
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -77,7 +70,7 @@ export default function Contact() {
       });
       return;
     }
-    contactMutation.mutate(formData);
+    handleFormSubmit();
   };
 
   return (
@@ -193,20 +186,10 @@ export default function Contact() {
 
             <Button
               type="submit"
-              disabled={contactMutation.isPending}
               className="w-full bg-accent-blue hover:bg-accent-blue-hover text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover-glow flex items-center justify-center space-x-2"
             >
-              {contactMutation.isPending ? (
-                <>
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                  <span>Sending...</span>
-                </>
-              ) : (
-                <>
-                  <Send size={16} />
-                  <span>Send Message</span>
-                </>
-              )}
+              <Send size={16} />
+              <span>Send Message</span>
             </Button>
           </form>
         </div>
