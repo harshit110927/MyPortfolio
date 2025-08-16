@@ -1,0 +1,89 @@
+Excellent, thank you for providing the reference and clarifying the details. That portfolio has a very clean, modern, and professional aesthetic.
+
+Based on your resume, the reference design, and your specific requirements, here is a highly detailed prompt you can give to an AI to generate your portfolio website.
+
+Prompt for AI Portfolio Generation
+Role: You are an expert frontend developer specializing in creating elegant, minimalist, and responsive personal portfolio websites using React and Tailwind CSS.
+
+Objective: Generate the complete code for a single-page portfolio website for Harshit Shukla. The website's design and aesthetic should be heavily inspired by the clean, dark-themed, and professional layout of this reference portfolio: https://www.wallofportfolios.in/portfolios/mithali-kini/.
+
+The content for the website must be derived from the provided resume. The target persona is an "aspiring software developer."
+
+Key Design & Layout Instructions (Inspired by Reference):
+
+Theme: Use a dark theme with a charcoal or off-black background and white/light-gray text. Use a single, professional accent color (like a muted blue or green) for links, buttons, and highlights.
+
+Typography: Use a clean, sans-serif font (like Inter or Poppins).
+
+Layout: Maintain a clean, single-column layout with ample white space.
+
+Animations: Use subtle, on-scroll fade-in animations for sections to add a professional touch.
+
+Website Sections (in this order):
+
+Hero Section:
+
+Display the name: Harshit Shukla.
+
+Underneath, add the title: Aspiring Software Developer.
+
+Include a short, professional one-liner: "I build secure, scalable backend solutions and explore machine learning."
+
+Display prominent, clickable icon links for Email, GitHub, and LinkedIn.
+
+About Me:
+
+A very concise and professional paragraph. Use this text:
+
+"I am a Computer Science undergraduate specializing in backend development and machine learning. My focus is on creating secure, scalable applications, demonstrated by my work on a multi-tenant REST API using Spring Boot, Java, and PostgreSQL. I am proficient in multiple languages and have a strong foundation in algorithms, data structures, and cloud technologies."
+
+Projects:
+
+Use a clean, card-based layout. Each card should have a title, a short description (1-2 bullet points from the resume), and a clear "View on GitHub" button or link.
+
+Crucially, clicking the project card or its link should take the user directly to the GitHub repository in a new tab. Do not create modals or separate project pages.
+
+Technical Skills:
+
+Display the skills in a clean grid or categorized list format. Use the categories from the resume: Languages, Frontend, Backend, Cloud/DevOps, ML/AI, etc.
+
+Contact:
+
+A simple and elegant section with a clear call to action like "Get In Touch".
+
+Include a functional contact form with fields for Name, Email, and Message.
+
+Content Details (Source from Resume):
+
+Contact Links:
+
+Email: mailto:harshit110927@gmail.com
+
+GitHub: https://github.com/harshit110927
+
+LinkedIn: https://linkedin.com/in/harshit110927
+
+Project Details (for the cards):
+
+Project 1: Multi-Tenant Ticket Booking Service
+
+Description: "Architected a secure, multi-tenant REST API using Spring Boot and Java. Implemented PostgreSQL Row-Level Security to enforce 100% data isolation between tenants."
+
+Link: https://github.com/harshit110927/ticket-booking-service
+
+Project 2: Chickpea Anomaly Detection
+
+Description: "Implemented a YOLOv7-Tiny pipeline trained on 20,000+ images, achieving 96.4% accuracy for anomaly detection in agricultural produce."
+
+Link: https://github.com/harshit110927/Chickpea-Anomaly
+
+Project 3: Solar Panel Efficiency Prediction
+
+Description: "Formulated predictive models using XGBoost and CatBoost, achieving a top-30 rank out of 500+ teams in a machine learning hackathon."
+
+Link: https://github.com/harshit110927/Zelestra-Hackathon
+
+Skills: Use the list from the "TECHNICAL SKILLS" section of the resume.
+
+Final Output:
+Please provide the complete, self-contained code for a single-page React application. Organize the code into logical components (Hero.js, About.js, Projects.js, etc.) and use Tailwind CSS for all styling. Ensure the final product is fully responsive and production-ready.
