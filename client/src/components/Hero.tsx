@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { Mail, Github, Linkedin, ArrowDown } from "lucide-react";
-import profileImage from "@assets/profile.jpg";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -40,7 +39,7 @@ export default function Hero() {
         {/* Professional Profile Image */}
         <div className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-accent-blue">
           <img
-            src={profileImage}
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
             alt="Harshit Shukla - Professional headshot"
             className="w-full h-full object-cover"
           />

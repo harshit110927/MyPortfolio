@@ -3,6 +3,14 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "EnRoute Delivery System",
+    description: "Built a full-stack e-commerce application with React, Express.js, and TypeScript. Features product browsing, cart management, order processing with PostgreSQL database.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+    imageAlt: "Modern e-commerce delivery dashboard with order tracking",
+    tags: ["React", "Express.js", "PostgreSQL", "TypeScript"],
+    github: "https://github.com/harshit110927/EnRoute-DeliverySystem-Implementation"
+  },
+  {
     title: "Multi-Tenant Ticket Booking Service",
     description: "Architected a secure, multi-tenant REST API using Spring Boot and Java. Implemented PostgreSQL Row-Level Security to enforce 100% data isolation between tenants.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
